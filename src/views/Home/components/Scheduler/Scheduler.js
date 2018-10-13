@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Button from 'generic/Button/Button'
+import TimeSlot from './TimeSlot/TimeSlot'
 
 const SchedulerStyle = styled.section`
   width: 100%;
@@ -16,12 +16,13 @@ const DayNames = styled.section`
   height: 100%;
   display: grid;
   grid-gap: 0.5rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 0.4fr 1fr 1fr 1fr 1fr 1fr;
   justify-items: center;
   align-items: center;
 `
 
 const Days = styled(DayNames)`
+  grid-template-columns: 0.25fr 1fr 1fr 1fr 1fr 1fr;
   justify-content: center;
 `
 
@@ -30,7 +31,7 @@ const Day = styled.div`
   grid-gap: 0.2rem;
   width: 100%;
 
-  div:last-of-type {
+  > div:last-of-type {
     height: 3rem;
     background: transparent;
   }
@@ -50,14 +51,6 @@ const Time = styled.div`
   font-weight: 700;
   justify-self: end;
   height: 5rem;
-`
-
-const TimeSlot = styled.div`
-  display: flex;
-  align-items: center;
-  background-color: ${({ theme }) => theme.colors.lightGray};
-  height: 5rem;
-  padding: 0 3rem;
 `
 
 const Scheduler = () => (
@@ -87,184 +80,74 @@ const Scheduler = () => (
         <Time>18:00</Time>
       </Times>
       <Day>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
+        <TimeSlot data={{ title: 'Working on the new feature in Story-333' }} />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
 
         <div />
       </Day>
       <Day>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
         <div />
       </Day>
       <Day>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
         <div />
       </Day>
       <Day>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
         <div />
       </Day>
       <Day>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
-        <TimeSlot>
-          <Button>Add</Button>
-        </TimeSlot>
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
+        <TimeSlot />
         <div />
       </Day>
     </Days>
