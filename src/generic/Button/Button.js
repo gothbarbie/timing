@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Default = styled.button`
+  cursor: pointer;
   width: 100%;
   background-color: transparent;
   color: ${({ theme }) => theme.colors.gray};
