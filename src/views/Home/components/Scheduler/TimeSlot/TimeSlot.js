@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Button from 'generic/Button/Button'
+import Icon from 'generic/Icon/Icon'
 
 const TimeSlotStyle = styled.div`
   display: flex;
@@ -23,6 +24,9 @@ const TimeSlot = ({ data }) => {
     return (
       <TimeSlotStyle blue>
         <Title>{data.title}</Title>
+        <Button icon>
+          <Icon icon={['fas', 'ellipsis-h']} />
+        </Button>
       </TimeSlotStyle>
     )
   }
