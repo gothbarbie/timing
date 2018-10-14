@@ -5,10 +5,10 @@ import Navigation from './Navigation/Navigation'
 import Scheduler from './Scheduler/Scheduler'
 
 import Button from 'generic/atoms/Button'
-import Tag from 'generic/atoms/Tag'
 import Modal from 'generic/molecules/Modal/Modal'
 import LabeledInput from 'generic/molecules/LabeledInput'
 import LabeledSelect from 'generic/molecules/LabeledSelect'
+import LabeledTags from 'generic/molecules/LabeledTags'
 
 const HomeStyle = styled.div`
   display: flex;
@@ -31,6 +31,13 @@ const CategorySection = styled.div`
   align-items: flex-end;
 `
 
+const AlignRight = styled.div`
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+`
+
 const Home = () => (
   <HomeStyle>
     <Navigation />
@@ -51,10 +58,20 @@ const Home = () => (
       </CategorySection>
       <TwoColumns>
         <LabeledInput name="add-tags" label="Add tags" />
-        <div>
-          <Tag name="unit test" blue />
-        </div>
+        <LabeledTags
+          tags={[{ blue: true, name: 'unit test', id: 1 }]}
+          label="Used recently"
+          onClick={id => console.log('added', id)}
+        />
       </TwoColumns>
+      <LabeledTags
+        tags={[{ blue: false, name: 'story-125', id: 3 }]}
+        label="Selected tags"
+        onClick={id => console.log('deleted', id)}
+      />
+      <AlignRight>
+        <Button primary>Create</Button>
+      </AlignRight>
     </Modal>
   </HomeStyle>
 )
