@@ -16,7 +16,7 @@ const Home = () => (
   <HomeStyle>
     <Navigation />
     <Scheduler />
-    <Modal title="Add event">Modal</Modal>
+    <Modal title="Add event" />
   </HomeStyle>
 )
 

@@ -40,7 +40,6 @@ const ModalMain = styled.main`
 `
 
 const Modal = ({ closeModal, children, title, visible }) => {
-  console.log('visible', visible)
   if (!visible) return null
 
   return (
