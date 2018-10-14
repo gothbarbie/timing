@@ -7,7 +7,7 @@ exports[`generic/molecules/LabeledInput renders 1`] = `
   >
     Test
   </Styled(styled.label)>
-  <styled.input
+  <Input
     name="test"
     onChange={[Function]}
   />
