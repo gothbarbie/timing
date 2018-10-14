@@ -5,14 +5,22 @@ import {
   faArrowCircleLeft,
   faArrowCircleRight,
   faEllipsisH,
+  faTimesCircle,
 } from '@fortawesome/free-solid-svg-icons'
 
 import Root from './Root'
 import App from './App/App'
 
-import store from './store'
+import configureStore from './store'
 
-library.add(faArrowCircleLeft, faArrowCircleRight, faEllipsisH)
+const store = configureStore()
+
+if (process.env.NODE_ENV !== 'production') {
+  const { whyDidYouUpdate } = require('why-did-you-update')
+  whyDidYouUpdate(React)
+}
+
+library.add(faArrowCircleLeft, faArrowCircleRight, faEllipsisH, faTimesCircle)
 
 ReactDOM.render(
   <Root store={store}>
