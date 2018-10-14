@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import TimeSlot from './TimeSlot/TimeSlot'
+import Timeslot from './Timeslot/Timeslot'
 
 const SchedulerStyle = styled.section`
   width: 100%;
@@ -80,74 +80,74 @@ const Scheduler = () => (
         <Time>18:00</Time>
       </Times>
       <Day>
-        <TimeSlot data={{ title: 'Working on the new feature in Story-333' }} />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
+        <Timeslot data={{ title: 'Working on the new feature in Story-333' }} />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
 
         <div />
       </Day>
       <Day>
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
         <div />
       </Day>
       <Day>
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
         <div />
       </Day>
       <Day>
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
         <div />
       </Day>
       <Day>
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
-        <TimeSlot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
+        <Timeslot />
         <div />
       </Day>
     </Days>

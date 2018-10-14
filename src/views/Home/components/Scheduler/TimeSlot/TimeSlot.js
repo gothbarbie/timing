@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { connect } from 'react-redux'
+
+import { openModal } from 'generic/Modal/modalActions'
 
 import Button from 'generic/Button/Button'
 import Icon from 'generic/Icon/Icon'
@@ -19,12 +22,12 @@ const Title = styled.div`
   font-weight: 400;
 `
 
-const TimeSlot = ({ data }) => {
+const Timeslot = ({ data, openModal }) => {
   if (data) {
     return (
       <TimeSlotStyle blue>
         <Title>{data.title}</Title>
-        <Button icon>
+        <Button icon onClick={openModal}>
           <Icon icon={['fas', 'ellipsis-h']} />
         </Button>
       </TimeSlotStyle>
@@ -37,4 +40,11 @@ const TimeSlot = ({ data }) => {
   )
 }
 
-export default TimeSlot
+const mapDispatchToProps = {
+  openModal,
+}
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Timeslot)
