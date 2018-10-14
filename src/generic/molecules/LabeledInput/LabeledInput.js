@@ -13,10 +13,10 @@ const LabelStyled = styled(Label)`
   margin-bottom: 1rem;
 `
 
-const LabeledInput = ({ name, label, onChange }) => (
+const LabeledInput = ({ name, label, onChange, type }) => (
   <LabeledInputStyle>
     <LabelStyled htmlFor={name}>{label}</LabelStyled>
-    <Input name={name} onChange={onChange} />
+    <Input name={name} onChange={onChange} type={type} />
   </LabeledInputStyle>
 )
 
