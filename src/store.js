@@ -1,22 +1,17 @@
-import { createStore, combineReducers } from 'redux'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { composeWithDevTools } from 'redux-devtools-extension'
+import thunk from 'redux-thunk'
 
-const SET_DAY = 'SET_DAY'
+import modalReducer from 'generic/Modal/modalReducer'
+import timeslotReducer from 'views/Home/components/Scheduler/Timeslot/timeslotReducer'
 
-const dayReducer = (state = {}, action) => {
-  switch (action.type) {
-    case SET_DAY:
-      return action.payload
-
-    default:
-      return state
-  }
+export default function configureStore(initialState) {
+  return createStore(
+    combineReducers({
+      timeslot: timeslotReducer,
+      modal: modalReducer,
+    }),
+    initialState,
+    composeWithDevTools(applyMiddleware(thunk))
+  )
 }
-
-const store = createStore(
-  combineReducers({
-    day: dayReducer,
-  }),
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-)
-
-export default store
