@@ -29,7 +29,7 @@ const ModalHeader = styled.header`
   color: ${({ theme }) => theme.colors.white};
   font-size: 2.4rem;
   font-weight: 500;
-  padding: 1rem 3rem;
+  padding: 1rem 1rem 1rem 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
