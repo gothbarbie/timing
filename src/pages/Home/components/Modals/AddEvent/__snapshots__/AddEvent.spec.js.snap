@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pages/Home/components/Modals/AddEvent renders 1`] = `
+<styled.section>
+  <LabeledInput
+    label="Title"
+    name="title"
+  />
+  <styled.div>
+    <LabeledInput
+      label="Start"
+      name="start"
+      type="date"
+    />
+    <LabeledInput
+      label="End"
+      name="end"
+      type="date"
+    />
+  </styled.div>
+  <styled.div>
+    <LabeledSelect
+      label="Category"
+      name="category"
+      options={
+        Array [
+          Object {
+            "key": "Test",
+            "value": "TestValue",
+          },
+        ]
+      }
+    />
+    <Button
+      primary={true}
+    >
+      Edit
+    </Button>
+  </styled.div>
+  <styled.div>
+    <LabeledInput
+      label="Add tags"
+      name="add-tags"
+    />
+    <LabeledTags
+      label="Used recently"
+      onClick={[Function]}
+      tags={
+        Array [
+          Object {
+            "blue": true,
+            "id": 1,
+            "name": "unit test",
+          },
+        ]
+      }
+    />
+  </styled.div>
+  <LabeledTags
+    label="Selected tags"
+    onClick={[Function]}
+    tags={
+      Array [
+        Object {
+          "blue": false,
+          "id": 3,
+          "name": "story-125",
+        },
+      ]
+    }
+  />
+  <styled.div>
+    <Button
+      primary={true}
+    >
+      Create
+    </Button>
+  </styled.div>
+</styled.section>
+`;

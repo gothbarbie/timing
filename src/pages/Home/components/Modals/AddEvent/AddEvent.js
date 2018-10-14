@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Button from 'generic/atoms/Button'
+import Button from '../../../../../generic/atoms/Button'
 
-import LabeledInput from 'generic/molecules/LabeledInput'
-import LabeledSelect from 'generic/molecules/LabeledSelect'
-import LabeledTags from 'generic/molecules/LabeledTags'
+import LabeledInput from '../../../../../generic/molecules/LabeledInput'
+import LabeledSelect from '../../../../../generic/molecules/LabeledSelect'
+import LabeledTags from '../../../../../generic/molecules/LabeledTags'
 
 const Wrapper = styled.section``
 
