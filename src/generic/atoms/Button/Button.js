@@ -44,7 +44,14 @@ const IconButton = styled(Default)`
 
 const Primary = styled(Default)``
 
-const Button = ({ active = false, children, icon, primary, size, onClick }) => {
+export const Button = ({
+  active = false,
+  children,
+  icon,
+  primary,
+  size,
+  onClick,
+}) => {
   if (primary)
     return (
       <Primary active={active} size={size} onClick={onClick}>

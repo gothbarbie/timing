@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Icon from 'generic/Icon/Icon'
+import Icon from 'generic/atoms/Icon/Icon'
 
 const NavButtonStyle = styled.button`
   border: none;

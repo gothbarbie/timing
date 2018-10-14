@@ -2,10 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import { connect } from 'react-redux'
 
-import { openModal } from 'generic/Modal/modalActions'
+import { openModal } from 'generic/molecules/Modal/modalActions'
 
-import Button from 'generic/Button/Button'
-import Icon from 'generic/Icon/Icon'
+import Button from 'generic/atoms/Button'
+import Icon from 'generic/atoms/Icon/Icon'
 
 const TimeSlotStyle = styled.div`
   display: flex;

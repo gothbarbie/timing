@@ -2,10 +2,10 @@ import React from 'react'
 import { connect } from 'react-redux'
 import styled from 'styled-components'
 
-import { closeModal } from 'generic/Modal/modalActions'
+import { closeModal } from './modalActions'
 
-import Button from 'generic/Button/Button'
-import Icon from 'generic/Icon/Icon'
+import Button from 'generic/atoms/Button'
+import Icon from 'generic/atoms/Icon/Icon'
 
 const Overlay = styled.div`
   position: fixed;

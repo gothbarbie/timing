@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Theme from '../generic/Theme/Theme'
-import Normalize from '../generic/Normalize/Normalize'
-import MainHeader from '../MainHeader'
-import Home from '../views/Home'
+import Theme from 'generic/Theme/Theme'
+import Normalize from 'generic/Normalize/Normalize'
+import MainHeader from 'layout/MainHeader'
+import Home from 'pages/Home'
 
 const App = () => (
   <React.Fragment>

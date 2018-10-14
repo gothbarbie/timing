@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import Navigation from './Navigation/Navigation'
 import Scheduler from './Scheduler/Scheduler'
-import Modal from 'generic/Modal/Modal'
+import Modal from 'generic/molecules/Modal/Modal'
 
 const HomeStyle = styled.div`
   display: flex;

@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import H1 from 'generic/Typography/H1'
-import NavButton from 'generic/NavButton/NavButton'
+import H1 from 'generic/atoms/Typography/H1'
+import NavButton from 'generic/molecules/NavButton/NavButton'
 
 const H1Dimmed = styled(H1)`
   color: ${({ theme }) => theme.colors.gray};
