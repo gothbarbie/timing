@@ -48,7 +48,7 @@ const Modal = ({ closeModal, children, title, visible }) => {
         <ModalHeader>
           {title}
           <Button icon onClick={closeModal}>
-            <Icon icon={['fas', 'times-circle']} />
+            <Icon icon={['fas', 'times-circle']} size="lg" color="white" />
           </Button>
         </ModalHeader>
         <ModalMain>{children}</ModalMain>
