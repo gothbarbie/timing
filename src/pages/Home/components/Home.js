@@ -5,6 +5,7 @@ import Navigation from './Navigation/Navigation'
 import Scheduler from './Scheduler/Scheduler'
 
 import Button from 'generic/atoms/Button'
+import Tag from 'generic/atoms/Tag'
 import Modal from 'generic/molecules/Modal/Modal'
 import LabeledInput from 'generic/molecules/LabeledInput'
 import LabeledSelect from 'generic/molecules/LabeledSelect'
@@ -48,6 +49,12 @@ const Home = () => (
         />
         <Button primary>Edit</Button>
       </CategorySection>
+      <TwoColumns>
+        <LabeledInput name="add-tags" label="Add tags" />
+        <div>
+          <Tag name="unit test" blue />
+        </div>
+      </TwoColumns>
     </Modal>
   </HomeStyle>
 )
