@@ -10,6 +10,7 @@ const Default = styled.button`
   color: ${({ active, theme }) => active && theme.colors.primary};
   outline: none;
   font-size: 1.6rem;
+  font-weight: 500;
   border: 1px solid transparent;
   border-color: ${({ active, theme }) => active && theme.colors.gray};
   padding: 1rem 2rem;
@@ -23,6 +24,10 @@ const Default = styled.button`
     background-color: ${({ theme }) => theme.colors.lightGray};
     color: ${({ theme }) => theme.colors.primary};
     border-color: ${({ theme }) => theme.colors.gray};
+  }
+
+  &:active {
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.25);
   }
 
   border-radius: 4px;
@@ -42,7 +47,23 @@ const IconButton = styled(Default)`
   }
 `
 
-const Primary = styled(Default)``
+const Primary = styled(Default)`
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
+
+  box-shadow: ${({ active, theme }) =>
+    active ? 'inset 0 2px 2px rgba(0, 0, 0, 0.25)' : 'none'};
+
+  &:focus {
+    border-color: ${({ theme }) => theme.colors.white};
+  }
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
+  }
+`
 
 export const Button = ({
   active = false,
