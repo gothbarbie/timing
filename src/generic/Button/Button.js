@@ -44,19 +44,23 @@ const IconButton = styled(Default)`
 
 const Primary = styled(Default)``
 
-const Button = ({ active = false, children, icon, primary, size }) => {
+const Button = ({ active = false, children, icon, primary, size, onClick }) => {
   if (primary)
     return (
-      <Primary active={active} size={size}>
+      <Primary active={active} size={size} onClick={onClick}>
         {children}
       </Primary>
     )
   if (icon) {
-    return <IconButton icon={icon}>{children}</IconButton>
+    return (
+      <IconButton icon={icon} onClick={onClick}>
+        {children}
+      </IconButton>
+    )
   }
 
   return (
-    <Default active={active} size={size}>
+    <Default active={active} onClick={onClick} size={size}>
       {children}
     </Default>
   )
