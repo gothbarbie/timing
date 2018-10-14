@@ -43,7 +43,9 @@ const IconButton = styled(Default)`
   }
 
   &:hover {
-    border-color: ${({ theme }) => theme.colors.lightGray};
+    background-color: ${({ theme }) => theme.colors.primary};
+    border-color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.primary};
   }
 `
 
