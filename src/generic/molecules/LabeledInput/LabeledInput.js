@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Label from 'generic/atoms/Label/Label'
-import Input from 'generic/atoms/Input/Input'
+import Label from '../../atoms/Label'
+import Input from '../../atoms/Input'
 
 const LabeledInputStyle = styled.div`
   display: flex;
