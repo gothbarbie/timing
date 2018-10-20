@@ -1,12 +1,14 @@
 import { SHOW_MODAL, HIDE_MODAL } from './modalTypes'
 
-export default (state = { visible: false }, action) => {
+const initialState = { content: 'addEvent', visible: false }
+
+export default (state = initialState, action) => {
   switch (action.type) {
     case SHOW_MODAL:
-      return { visible: true }
+      return { content: action.payload.content, visible: true }
 
     case HIDE_MODAL:
-      return { visible: false }
+      return { ...state, visible: false }
 
     default:
       return state
