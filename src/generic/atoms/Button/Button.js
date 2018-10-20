@@ -73,24 +73,25 @@ export const Button = ({
   icon,
   primary,
   size,
+  title,
   onClick,
 }) => {
   if (primary)
     return (
-      <Primary active={active} size={size} onClick={onClick}>
+      <Primary active={active} size={size} onClick={onClick} title={title}>
         {children}
       </Primary>
     )
   if (icon) {
     return (
-      <IconButton icon={icon} onClick={onClick}>
+      <IconButton icon={icon} onClick={onClick} title={title}>
         {children}
       </IconButton>
     )
   }
 
   return (
-    <Default active={active} onClick={onClick} size={size}>
+    <Default active={active} onClick={onClick} size={size} title={title}>
       {children}
     </Default>
   )
