@@ -10,7 +10,8 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
-    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-jest": "^21.25.1",
+    "eslint-watch": "^4.0.2",
     "jest-styled-components": "^6.2.1",
     "react": "^16.5.2",
     "react-app-rewire-styled-components": "^3.0.2",
@@ -30,9 +31,10 @@
     "@storybook/react": "^3.4.11",
     "eslint-config-prettier": "^3.1.0",
     "eslint-plugin-prettier": "^3.0.0",
-    "prettier": "^1.14.3",
+    "eslint-plugin-standard": "^4.0.0",
     "husky": "^1.1.2",
     "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
     "redux-devtools-extension": "^2.13.5",
     "why-did-you-update": "^0.1.1"
   },
@@ -43,7 +45,10 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "lint": "eslint src",
+    "lint:watch": "esw src -w",
+    "eslint-check": "eslint --print-config .eslintrc | eslint-config-prettier-check"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json}": [
