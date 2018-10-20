@@ -6,8 +6,11 @@ import {
   faArrowCircleRight,
   faCog,
   faEllipsisH,
-  faTimesCircle,
+  faPencilAlt,
   faPlusCircle,
+  faSearch,
+  faTimes,
+  faTimesCircle,
 } from '@fortawesome/free-solid-svg-icons'
 
 import Root from './Root'
@@ -27,7 +30,10 @@ library.add(
   faArrowCircleRight,
   faCog,
   faEllipsisH,
+  faPencilAlt,
   faPlusCircle,
+  faSearch,
+  faTimes,
   faTimesCircle
 )
 
