@@ -2,9 +2,9 @@
 
 exports[`generic/molecules/LabeledTags renders 1`] = `
 <styled.div>
-  <styled.label>
+  <Styled(styled.label)>
     Test Tags
-  </styled.label>
+  </Styled(styled.label)>
   <Tag
     blue={true}
     key="1"
