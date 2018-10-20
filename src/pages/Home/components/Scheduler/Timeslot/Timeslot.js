@@ -22,20 +22,20 @@ const Title = styled.div`
   font-weight: 400;
 `
 
-const Timeslot = ({ data, openModal }) => {
+const TimeSlot = ({ data, openModal }) => {
   if (data) {
     return (
       <TimeSlotStyle blue>
         <Title>{data.title}</Title>
         <Button icon onClick={openModal}>
-          <Icon icon={['fas', 'ellipsis-h']} />
+          <Icon icon={['fas', 'ellipsis-h']} color="gray" />
         </Button>
       </TimeSlotStyle>
     )
   }
   return (
     <TimeSlotStyle>
-      <Button>Add</Button>
+      <Button onClick={openModal}>Add</Button>
     </TimeSlotStyle>
   )
 }
@@ -47,4 +47,4 @@ const mapDispatchToProps = {
 export default connect(
   null,
   mapDispatchToProps
-)(Timeslot)
+)(TimeSlot)
