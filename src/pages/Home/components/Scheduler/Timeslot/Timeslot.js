@@ -31,15 +31,20 @@ const TimeSlot = ({ data, openModal }) => {
         <IconButton
           color="gray"
           icon={['fas', 'ellipsis-h']}
-          onClick={openModal}
+          onClick={() => openModal({ content: 'editEvent' })}
         />
       </TimeSlotStyle>
     )
   }
   return (
     <TimeSlotStyle>
-      <Button hasIcon onClick={openModal} icon={['fas', 'plus-circle']}>
-        <Icon icon={['fas', 'plus-circle']} />
+      <Button
+        fullWidth
+        hasIcon
+        icon={['fas', 'plus-circle']}
+        onClick={() => openModal({ content: 'addEvent' })}
+      >
+        <Icon icon={['fas', 'plus-circle']} size="lg" />
       </Button>
     </TimeSlotStyle>
   )
