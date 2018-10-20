@@ -9,6 +9,7 @@ const ButtonStyle = styled.button`
   background-color: transparent;
   border: none;
   cursor: ${({ onClick }) => (onClick ? 'pointer' : 'none')};
+  color: ${({ color, theme }) => color === 'primary' && theme.colors.primary};
   color: ${({ color, theme }) => color === 'white' && theme.colors.white};
   color: ${({ color, theme }) => color === 'gray' && theme.colors.gray};
 
@@ -23,7 +24,7 @@ const ButtonStyle = styled.button`
 
 // NOTE! All icons used must be manually added at src/index.js
 const IconButton = ({ color, hoverColor, icon, size = 'lg', onClick }) => (
-  <ButtonStyle onClick={onClick} color={color} hoverColor={hoverColor}>
+  <ButtonStyle color={color} hoverColor={hoverColor} onClick={onClick}>
     <FontAwesomeIcon icon={icon} size={size} />
   </ButtonStyle>
 )
