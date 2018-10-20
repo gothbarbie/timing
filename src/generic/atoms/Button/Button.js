@@ -34,8 +34,8 @@ const Default = styled.button`
 `
 
 const IconButton = styled(Default)`
-  width: ${({ icon }) => icon && 'auto'};
-  padding: ${({ icon }) => icon && '.5rem'};
+  width: ${({ hasIcon }) => hasIcon && 'auto'};
+  padding: ${({ hasIcon }) => hasIcon && '.5rem'};
 
   &:focus {
     border-color: ${({ theme }) => theme.colors.lightGray};
@@ -46,6 +46,7 @@ const IconButton = styled(Default)`
     background-color: ${({ theme }) => theme.colors.primary};
     border-color: ${({ theme }) => theme.colors.white};
     color: ${({ theme }) => theme.colors.primary};
+    fill: ${({ theme }) => theme.colors.primary};
   }
 `
 
@@ -70,7 +71,7 @@ const Primary = styled(Default)`
 export const Button = ({
   active = false,
   children,
-  icon,
+  hasIcon,
   primary,
   size,
   title,
@@ -82,9 +83,9 @@ export const Button = ({
         {children}
       </Primary>
     )
-  if (icon) {
+  if (hasIcon) {
     return (
-      <IconButton icon={icon} onClick={onClick} title={title}>
+      <IconButton hasIcon={hasIcon} onClick={onClick} title={title}>
         {children}
       </IconButton>
     )
