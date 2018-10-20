@@ -3,8 +3,9 @@ import styled from 'styled-components'
 
 const Default = styled.button`
   cursor: pointer;
-  width: 100%;
   width: ${({ size }) => size === 's' && 'auto'};
+  width: ${({ fullWidth }) => fullWidth && '100%'};
+
   background-color: transparent;
   color: ${({ theme }) => theme.colors.gray};
   color: ${({ active, theme }) => active && theme.colors.primary};
@@ -33,15 +34,14 @@ const Default = styled.button`
   border-radius: 4px;
 `
 
-const IconButton = styled(Default)`
+const WithIcon = styled(Default)`
   &:focus {
     border-color: ${({ theme }) => theme.colors.lightGray};
     color: ${({ theme }) => theme.colors.primary};
   }
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.primary};
-    border-color: ${({ theme }) => theme.colors.white};
+    border-color: ${({ theme }) => theme.colors.gray};
     color: ${({ theme }) => theme.colors.primary};
     fill: ${({ theme }) => theme.colors.primary};
   }
@@ -68,6 +68,7 @@ const Primary = styled(Default)`
 export const Button = ({
   active = false,
   children,
+  fullWidth,
   hasIcon,
   primary,
   size,
@@ -76,20 +77,38 @@ export const Button = ({
 }) => {
   if (primary)
     return (
-      <Primary active={active} onClick={onClick} size={size} title={title}>
+      <Primary
+        active={active}
+        fullWidth={fullWidth}
+        onClick={onClick}
+        size={size}
+        title={title}
+      >
         {children}
       </Primary>
     )
   if (hasIcon) {
     return (
-      <IconButton hasIcon={hasIcon} onClick={onClick} title={title}>
+      <WithIcon
+        active={active}
+        fullWidth={fullWidth}
+        hasIcon={hasIcon}
+        onClick={onClick}
+        title={title}
+      >
         {children}
-      </IconButton>
+      </WithIcon>
     )
   }
 
   return (
-    <Default active={active} onClick={onClick} size={size} title={title}>
+    <Default
+      active={active}
+      fullWidth={fullWidth}
+      onClick={onClick}
+      size={size}
+      title={title}
+    >
       {children}
     </Default>
   )
