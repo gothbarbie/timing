@@ -10,6 +10,7 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.6.0",
     "enzyme-to-json": "^3.3.4",
+    "eslint-plugin-react": "^7.11.1",
     "jest-styled-components": "^6.2.1",
     "react": "^16.5.2",
     "react-app-rewire-styled-components": "^3.0.2",
@@ -21,17 +22,17 @@
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "storybook-styled-components": "^1.1.2",
-    "styled-components": "beta"
+    "styled-components": "^4"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.11",
     "@storybook/addon-links": "^3.4.11",
     "@storybook/react": "^3.4.11",
-    "eslint-plugin-jest": "^21.25.1",
-    "eslint-watch": "^4.0.2",
     "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-jest": "^21.25.1",
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-standard": "^4.0.0",
+    "eslint-watch": "^4.0.2",
     "husky": "^1.1.2",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3",
@@ -41,7 +42,7 @@
   "scripts": {
     "start": "NODE_PATH=src react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --modulePaths=src",
     "test:coverage": "yarn test -- --coverage",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
@@ -66,6 +67,9 @@
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules"
     ]
   }
 }
