@@ -1,8 +1,5 @@
 import React from 'react'
-// import { ThemeProvider } from 'styled-components'
 import { shallow } from 'enzyme'
-// import renderer from 'react-test-renderer'
-import 'jest-styled-components'
 
 import { theme } from '../../Theme'
 import Button from './Button'
@@ -16,7 +13,7 @@ describe('generic/atoms/Button', () => {
 
   it('renders Primary style', () => {
     const component = shallow(
-      <Button theme={theme} primary>
+      <Button primary theme={theme}>
         Text
       </Button>
     )
@@ -26,7 +23,7 @@ describe('generic/atoms/Button', () => {
 
   it('renders Icon style', () => {
     const component = shallow(
-      <Button theme={theme} icon>
+      <Button icon theme={theme}>
         <i />
       </Button>
     )
