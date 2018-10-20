@@ -4,8 +4,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import {
   faArrowCircleLeft,
   faArrowCircleRight,
+  faCog,
   faEllipsisH,
   faTimesCircle,
+  faPlusCircle,
 } from '@fortawesome/free-solid-svg-icons'
 
 import Root from './Root'
@@ -20,7 +22,14 @@ if (process.env.NODE_ENV !== 'production') {
   whyDidYouUpdate(React)
 }
 
-library.add(faArrowCircleLeft, faArrowCircleRight, faEllipsisH, faTimesCircle)
+library.add(
+  faArrowCircleLeft,
+  faArrowCircleRight,
+  faCog,
+  faEllipsisH,
+  faPlusCircle,
+  faTimesCircle
+)
 
 ReactDOM.render(
   <Root store={store}>
