@@ -20,9 +20,13 @@
     "react-test-renderer": "^16.5.2",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
+    "storybook-styled-components": "^1.1.2",
     "styled-components": "beta"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.4.11",
+    "@storybook/addon-links": "^3.4.11",
+    "@storybook/react": "^3.4.11",
     "redux-devtools-extension": "^2.13.5",
     "why-did-you-update": "^0.1.1"
   },
@@ -30,7 +34,9 @@
     "start": "NODE_PATH=src react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": "react-app"
