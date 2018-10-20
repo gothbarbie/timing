@@ -9,11 +9,11 @@ exports[`generic/atoms/Button renders Default style 1`] = `
 `;
 
 exports[`generic/atoms/Button renders Icon style 1`] = `
-<Styled(styled.button)
-  icon={true}
+<styled.button
+  active={false}
 >
   <i />
-</Styled(styled.button)>
+</styled.button>
 `;
 
 exports[`generic/atoms/Button renders Primary style 1`] = `
