@@ -34,9 +34,6 @@ const Default = styled.button`
 `
 
 const IconButton = styled(Default)`
-  width: ${({ hasIcon }) => hasIcon && 'auto'};
-  padding: ${({ hasIcon }) => hasIcon && '.5rem'};
-
   &:focus {
     border-color: ${({ theme }) => theme.colors.lightGray};
     color: ${({ theme }) => theme.colors.primary};
