@@ -19,7 +19,7 @@ const Overlay = styled.div`
 `
 
 const ModalStyle = styled.div`
-  min-width: 400px;
+  min-width: 300px;
   background: ${({ theme }) => theme.colors.background};
 `
 
@@ -50,7 +50,7 @@ class Modal extends React.PureComponent {
     const { closeModal, children, title, visible } = this.props
 
     return !visible ? null : (
-      <Overlay onClick={this.onClickHandler} id="overlay">
+      <Overlay id="overlay" onClick={this.onClickHandler}>
         <ModalStyle>
           <ModalHeader>
             {title}
