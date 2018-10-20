@@ -4,8 +4,7 @@ import styled from 'styled-components'
 
 import { closeModal } from './modalActions'
 
-import Button from 'generic/atoms/Button'
-import Icon from 'generic/atoms/Icon/Icon'
+import IconButton from 'generic/atoms/IconButton'
 
 const Overlay = styled.div`
   position: fixed;
@@ -55,9 +54,13 @@ class Modal extends React.PureComponent {
         <ModalStyle>
           <ModalHeader>
             {title}
-            <Button icon onClick={closeModal}>
-              <Icon icon={['fas', 'times-circle']} size="lg" color="white" />
-            </Button>
+            <IconButton
+              color="white"
+              hoverColor="gray"
+              icon={['fas', 'times-circle']}
+              onClick={closeModal}
+              size="1x"
+            />
           </ModalHeader>
           <ModalMain>{children}</ModalMain>
         </ModalStyle>
