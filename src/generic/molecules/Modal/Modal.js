@@ -39,22 +39,31 @@ const ModalMain = styled.main`
   padding: 3rem;
 `
 
-const Modal = ({ closeModal, children, title, visible }) => {
-  if (!visible) return null
+class Modal extends React.PureComponent {
+  onClickHandler = event => {
+    const { closeModal } = this.props
+    if (event.target.id === 'overlay') {
+      closeModal()
+    }
+  }
 
-  return (
-    <Overlay>
-      <ModalStyle>
-        <ModalHeader>
-          {title}
-          <Button icon onClick={closeModal}>
-            <Icon icon={['fas', 'times-circle']} size="lg" color="white" />
-          </Button>
-        </ModalHeader>
-        <ModalMain>{children}</ModalMain>
-      </ModalStyle>
-    </Overlay>
-  )
+  render() {
+    const { closeModal, children, title, visible } = this.props
+
+    return !visible ? null : (
+      <Overlay onClick={this.onClickHandler} id="overlay">
+        <ModalStyle>
+          <ModalHeader>
+            {title}
+            <Button icon onClick={closeModal}>
+              <Icon icon={['fas', 'times-circle']} size="lg" color="white" />
+            </Button>
+          </ModalHeader>
+          <ModalMain>{children}</ModalMain>
+        </ModalStyle>
+      </Overlay>
+    )
+  }
 }
 
 const mapStateToProps = ({ modal }) => {
