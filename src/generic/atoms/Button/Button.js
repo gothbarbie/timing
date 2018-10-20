@@ -76,7 +76,7 @@ export const Button = ({
 }) => {
   if (primary)
     return (
-      <Primary active={active} size={size} onClick={onClick} title={title}>
+      <Primary active={active} onClick={onClick} size={size} title={title}>
         {children}
       </Primary>
     )
