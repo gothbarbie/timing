@@ -4,6 +4,7 @@ export const closeModal = () => ({
   type: HIDE_MODAL,
 })
 
-export const openModal = () => ({
+export const openModal = content => ({
   type: SHOW_MODAL,
+  payload: content,
 })
