@@ -11,7 +11,7 @@ In this first version you will have to enter your time slots individually and ma
 ### Technologies
 
 - The app is built on `create-react-app` and using `styled-components` for styling.
-- We implement `storybook` for generating a UI component library.
+- We implement `storybook` for generating a UI component library. Here's a great guide on how to get started: https://elijahmanor.com/cra-storybook/
 
 ## Author
 
