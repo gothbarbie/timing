@@ -11,7 +11,7 @@ const AppWrap = styled.div`
 `
 
 const App = () => (
-  <React.Fragment>
+  <>
     <Normalize />
     <Theme>
       <AppWrap>
@@ -19,7 +19,7 @@ const App = () => (
         <Home />
       </AppWrap>
     </Theme>
-  </React.Fragment>
+  </>
 )
 
 export default App
