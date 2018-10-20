@@ -10,6 +10,7 @@ const Normalize = createGlobalStyle`
     line-height: 1.15; /* 1 */
     -webkit-text-size-adjust: 100%; /* 2 */
     font-size: 62.5%;
+    height: 100%;
   }
 
   /* Sections
@@ -22,7 +23,7 @@ const Normalize = createGlobalStyle`
   body {
     margin: 0;
     font-family: Roboto, sans-serif;
-
+    height: 100%;
   }
 
   h1 {
