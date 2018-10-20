@@ -6,6 +6,7 @@ import { openModal } from 'generic/molecules/Modal/modalActions'
 
 import Button from 'generic/atoms/Button'
 import Icon from 'generic/atoms/Icon/Icon'
+import IconButton from 'generic/atoms/IconButton'
 
 const TimeSlotStyle = styled.div`
   display: flex;
@@ -27,15 +28,19 @@ const TimeSlot = ({ data, openModal }) => {
     return (
       <TimeSlotStyle blue>
         <Title>{data.title}</Title>
-        <Button icon onClick={openModal}>
-          <Icon icon={['fas', 'ellipsis-h']} color="gray" />
-        </Button>
+        <IconButton
+          color="gray"
+          icon={['fas', 'ellipsis-h']}
+          onClick={openModal}
+        />
       </TimeSlotStyle>
     )
   }
   return (
     <TimeSlotStyle>
-      <Button onClick={openModal}>Add</Button>
+      <Button hasIcon onClick={openModal} icon={['fas', 'plus-circle']}>
+        <Icon icon={['fas', 'plus-circle']} />
+      </Button>
     </TimeSlotStyle>
   )
 }
